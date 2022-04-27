@@ -1,0 +1,2 @@
+ git config --global user.name "Sam Andersen"
+ git config --global user.email samueldandersen@byui.edu 
