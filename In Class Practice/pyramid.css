@@ -1,0 +1,22 @@
+h1{
+background-color: red;
+   width: 750px; 
+   height: 100px;
+    text-align: center;
+    background-position: 50%;
+    margin-left: 25%;
+}
+h2{ 
+background-color: blue;
+    width: 800px;
+    height: 200px;
+    text-align: center;
+    
+}
+h3{
+background-color: green;
+    width: 850px;
+    height: 250px;
+    text-align: center;
+    
+}
