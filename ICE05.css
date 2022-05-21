@@ -1,0 +1,47 @@
+.headerimg {
+width: 100%;
+
+}
+
+body {
+    margin: 0;
+}
+
+footer {
+    background-color: gray;
+}
+
+.desk {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 70%;
+    border: solid 10px;
+}
+
+.graphic {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 70%;
+    border: solid 10px;
+
+}
+
+.person {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 70%;
+    border: solid 10px;
+}
+
+div img {
+    margin: 50px;
+}
+
+.divimg {
+    text-align: center;
+    padding: 60px;
+}
+
+header {
+    margin-bottom: -5%;
+}

@@ -11,6 +11,7 @@ background-color: blue;
     width: 800px;
     height: 200px;
     text-align: center;
+    margin-left: 23%;
     
 }
 h3{
@@ -18,5 +19,10 @@ background-color: green;
     width: 850px;
     height: 250px;
     text-align: center;
+    margin-left: 21%;
     
+}
+
+body h1,h2,h3 {
+    padding: 0;
 }
