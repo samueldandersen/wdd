@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/diceshop.css">
+    <link rel="stylesheet" href="./styles/streaming.css">
     <title>Home</title>
 </head>
 <body>
@@ -20,11 +20,14 @@
         </nav>
     </header>
 
-     <main>
+     <main id="homegrid3">
         <h1>Streaming Information</h1>
-        <img src="images/weapons.webp" alt="image for page3">
-        <h3>Streaming</h3>
+        <img class="img1" src="images/weapons.webp" alt="image for page3">
+        
+        <div class="text3">
+
         <p>
+            <h3>Streaming</h3>
             Welcome to Elemental Rolls Streaming Information page. Incase you are not aware,
          Elemental Roll is a company made up of a ton of nerds who like to play Tabletop 
          Role Playing Games, many of them actually using dice made by Elemental Roll. 
@@ -41,40 +44,36 @@
          be less popular than others, but by no means less enjoyable to play with your friends. 
          Come on down to join in the fun.
 
-        </p>
+        
+        </div>
 
-        <h3>
+        <h2>
             Please fill out the form for any online order or streaming question, Our representative will
             get back to you within 24-48 hours.
-        </h3>
+        </h2>
 
+        <div id="feedback"></div>
         <form action="/my-handling-form-page" method="post">
 
             <ul>
                 <li>
-                  <label for="Name">Name:</label>
+                  <label for="name">Name:</label>
                   <input type="text" id="name" name="user_name">
                 </li>
                 <li>
-                  <label for="Date of Birth">Date of Birth:</label>
+                  <label for="mail">E-mail:</label>
                   <input type="email" id="mail" name="user_email">
                 </li>
                 <li>
-                  <label for="Phone Number">Phone Number:</label>
+                  <label for="msg">Message:</label>
                   <textarea id="msg" name="user_message"></textarea>
                 </li>
-                <li>
-                    <label for="What is the Problem">What is the Problem:</label>
-                    <textarea id="msg" name="user_message"></textarea>
-                  </li>
                 <li class="button">
-                    <button type="submit">Submit</button>
+                    <button type="submit">Send your message</button>
                   </li>
                </ul>
 
         </form>
-
-
 
      </main>
 
@@ -96,5 +95,22 @@
         </div>
         
     </footer>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
 </body>
 </html>
